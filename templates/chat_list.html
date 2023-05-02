@@ -1,0 +1,34 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+<p align="center" style="font-family:'Komi'; font-size:70%">Отзывы о портале</p>
+{% endblock %}
+
+{% block page-lead %}
+<br><br><p align="center" style="font-family:'Gabriola'; font-size:170%"><b>Здесь вы можете почитать отзывы наших пользователей о работе этого сайта. Чтобы оставить свой отзыв,<br> перейдите на главную.</b></p>
+{% endblock %}
+{% load static %}
+{% block content %}
+<div class="container px-4 py-5" id="terms-table">
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col" class="py-3">Пользователь</th>
+              <th scope="col" class="py-3">Тема</th>
+              <th scope="col" class="py-3">Отзыв</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for user, term, definition in terms %}
+            <tr>
+                <td class="py-3"><b>{{ user }}</b></td>
+                <td class="py-3"><b>{{ term }}</b></td>
+                <td class="py-3"><b>{{ definition }}</b></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+</div>
+{% endblock %}

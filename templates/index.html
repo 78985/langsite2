@@ -1,0 +1,105 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+<p align="center" style="font-family:'Komi'; font-size:80%">Cualli tonalli!</p>
+{% endblock %}
+
+{% block page-lead %}
+<p align="center" style="font-family:'Gabriola'; font-size:150%"><b>Добро пожаловать на Tlahtoltelpochcalli - первый русскоязычный портал, посвящённый изучению языков древних <br>цивилизаций Мексики - майя, ацтеков,
+ольмеков, тарасков и т.д. Здесь вы найдёте словари, видеоуроки, исторические справки и <br>многое другое. Сайт предназначен для интересующихся культурой
+и историей мексиканских цивилизаций, чтобы облегчить <br>изучение источников на местных языках.</b></p>
+{% endblock %}
+{% load static %}
+
+{% block content %}
+<div class="container px-4 py-5" id="project-contents">
+	<div class="py-2">
+    <h2 class="pb-2 border-bottom" ><p align="center" style="font-family:'Komi'; font-size:100%;  position:absolute; padding-left: 310px; padding-top: 48px"><b>Здесь вы можете изучить:</b></p></h2>
+	<img src="{% static 'symbols2.png' %}" alt="Tlahtoltelpochcalli: портал о языках древней Мексики" width="1260" height="95"/>
+	</div>
+    <div class="row g-4 py-5 row-cols-2 row-cols-lg-3">
+		<div class="py-2">
+            <div>
+                <h3 class="fs-2"><p align="center" style="font-family:'Komi'; font-size:60%; position:absolute;  padding-left: 90px; padding-top: 60px"><b>Словарь-<br>разговорник</b></p></h3>
+                <p align="center" style="font-family:'Gabriola'; font-size:115%; position:absolute; padding-left: 45px; padding-top: 120px"><b>Здесь располагается краткий словарь наиболее<br> общеупотребимых слов и выражений языков<br> науатль, чольти, юкатекского и др.</b></p>
+                <div class="text-center">
+				<a href="/terms-list">
+                    <h1 align="center" style="font-family:'Gabriola'; font-size:120%; padding-left: 141px; padding-top: 248px"><b>Ознакомиться</b></h1>
+                </a>
+				</div>
+            </div>
+			<img src="{% static 'atl.png' %}" alt="Tlahtoltelpochcalli: портал о языках древней Мексики" width="380" height="380"/>
+        </div>
+        <div class="py-2">
+            <div>
+                <h3 class="fs-2"><p align="center" style="font-family:'Komi'; font-size:60%; position:absolute;  padding-left: 70px; padding-top: 60px"><b>Добавить новое<br> слово</b></p></h3>
+                <p align="center" style="font-family:'Gabriola'; font-size:120%; position:absolute; padding-left: 55px; padding-top: 125px"><b>Знаете слово, которого нет на этом сайте?<br> Добавьте его через эту страницу!</b></p>
+                <div class="text-center">
+				<a href="/add-term">
+                    <h1 align="center" style="font-family:'Gabriola'; font-size:100%; padding-left: 130px; padding-top: 250px"><b>Добавить новое слово</b></h1>
+                </a>
+				</div>
+            </div>
+			<img src="{% static 'coatl2.png' %}" alt="Tlahtoltelpochcalli: портал о языках древней Мексики" width="380" height="380"/>
+        </div>
+		<div class="py-2">
+            <div>
+                <h3 class="fs-2"><p align="center" style="font-family:'Komi'; font-size:60%; position:absolute;  padding-left: 90px; padding-top: 60px"><b>Исторические<br>справки</b></p></h3>
+                <p align="center" style="font-family:'Gabriola'; font-size:115%; position:absolute; padding-left: 60px; padding-top: 140px"><b>Краткий рассказ о некоторых цивилизациях<br> древней Мексики.</b></p>
+                <div class="text-center">
+				<a href="/hist">
+                    <h1 align="center" style="font-family:'Gabriola'; font-size:140%; padding-left: 153px; padding-top: 247px"><b>Изучить</b></h1>
+                </a>
+				</div>
+            </div>
+			<img src="{% static 'calli.png' %}" alt="Tlahtoltelpochcalli: портал о языках древней Мексики" width="380" height="380"/>
+        </div>
+		<div class="py-2">
+            <div>
+                <h3 class="fs-2"><p align="center" style="font-family:'Komi'; font-size:80%; position:absolute;  padding-left: 70px; padding-top: 70px"><b>Видеоуроки</b></p></h3>
+                <p align="center" style="font-family:'Gabriola'; font-size:115%; position:absolute; padding-left: 60px; padding-top: 140px"><b>Здесь собраны видеоуроки, которые помогут<br> вам быстрее усвоить новый материал.</b></p>
+                <div class="text-center">
+				<a href="/video-lessons">
+                    <h1 align="center" style="font-family:'Gabriola'; font-size:120%; padding-left: 141px; padding-top: 248px"><b>Ознакомиться</b></h1>
+                </a>
+				</div>
+            </div>
+			<img src="{% static 'cuauhtli.png' %}" alt="Tlahtoltelpochcalli: портал о языках древней Мексики" width="380" height="380"/>
+        </div>
+		<div class="py-2">
+            <div>
+                <h3 class="fs-2"><p align="center" style="font-family:'Komi'; font-size:90%; position:absolute;  padding-left: 100px; padding-top: 70px"><b>Отзывы</b></p></h3>
+                <p align="center" style="font-family:'Gabriola'; font-size:115%; position:absolute; padding-left: 65px; padding-top: 140px"><b>Ознакомьтесь со мнениями пользователей<br> об этом портале.</b></p>
+                <div class="text-center">
+				<a href="/chat-list">
+                    <h1 align="center" style="font-family:'Gabriola'; font-size:140%; padding-left: 153px; padding-top: 247px"><b>Изучить</b></h1>
+                </a>
+				</div>
+            </div>
+			<img src="{% static 'mazatl.png' %}" alt="Tlahtoltelpochcalli: портал о языках древней Мексики" width="380" height="380"/>
+        </div>
+		<div class="py-2">
+            <div>
+                <h3 class="fs-2"><p align="center" style="font-family:'Komi'; font-size:90%; position:absolute;  padding-left: 50px; padding-top: 60px"><b>Статистика</b></p></h3>
+                <p align="center" style="font-family:'Gabriola'; font-size:115%; position:absolute; padding-left: 54px; padding-top: 120px"><b>Здесь собраны статистические данные<br> о портале: сколько терминов присутствует в<br> словаре-разговорнике и какой они длины.</b></p>
+                <div class="text-center">
+				<a href="/stats">
+                    <h1 align="center" style="font-family:'Gabriola'; font-size:120%; padding-left: 141px; padding-top: 248px"><b>Ознакомиться</b></h1>
+                </a>
+				</div>
+            </div>
+			<img src="{% static 'quiyahuitl.png' %}" alt="Tlahtoltelpochcalli: портал о языках древней Мексики" width="380" height="380"/>
+        </div>
+        </div>
+		<div class="py-2">
+            <div>
+                <div class="text-center">
+				<a href="/chat">
+                    <h1 align="center" style="font-family:'Komi'; font-size:250%; padding-left: 350px; padding-top: 50px"><b>Оставить отзыв</b></h1>
+                </a>
+				</div>
+            </div>
+			<img src="{% static 'otzyv.png' %}" alt="Tlahtoltelpochcalli: портал о языках древней Мексики" width="1220" height="150"/>
+        </div>
+    </div>
+{% endblock %}

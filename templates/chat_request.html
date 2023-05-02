@@ -1,0 +1,31 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+{% if success %}
+<p style="font-family:'Komi'; font-size:70%"><b>Отзыв оставлен!</b></p>
+{% else %}
+<p style="font-family:'Komi'; font-size:60%"><b>Ошибка</b></p>
+{% endif %}
+{% endblock %}
+{% load static %}
+
+{% block page-lead %}{% endblock %}
+
+{% block content %}
+<div align="center" class="container-sm px-5 py-5" id="term-form-result" style="position:absolute">
+    <h2 class="py-2" style="font-family:'Komi'; font-size:200%"><b>Результат:</b></h2>
+    <p style="font-family:'Gabriola'; font-size:200%">Уважаемый пользователь <span class="fst-italic">{{ user }}</span>,<br/>
+        Добавление отзыва завершилось <span class="fw-bold">{% if success %}успешно{% else %}ошибкой{% endif %}</span>.
+    </p>
+
+    <h2 class="py-2" style="font-family:'Komi'; font-size:200%"><b>Комментарий:</b></h2>
+    <p style="font-family:'Gabriola'; font-size:200%">{{ comment }}</p>
+
+    <h2 class="py-2" style="font-family:'Komi'; font-size:200%"><b>Что вы еще можете сделать?</b></h2>
+    <ul>
+        <li style="font-family:'Gabriola'; font-size:150%">Оставить ещё один <a href="/chat">отзыв</a>;</li>
+        <li style="font-family:'Gabriola'; font-size:150%">Вернуться на <a href="/">главную.</a></li>
+    </ul>
+</div>
+<img src="{% static 'symbols3.png' %}" class="img-responsive">
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+<p align="center" style="font-family:'Komi'; font-size:70%">Оставить отзыв</p>
+{% endblock %}
+
+{% block page-lead %}
+<br><br><p align="center" style="font-family:'Gabriola'; font-size:170%"><b>На этой странице вы можете оставить ваше мнение о портале, а также предложить свои варианты его развития.</b></p>
+{% endblock %}
+{% load static %}
+
+{% block content %}
+<div class="container-sm px-5 py-5" id="term-form" style="position:absolute">
+    <form method="post">
+        <div class="row px-5 py-2">
+            <h3 style="font-family:'Komi'; font-size:150%"><b>Добавьте отзыв:</b></h3>
+        </div>
+        <div class="row px-5 py-2">
+            <div class="col-md-6">
+                <label for="name" style="font-family:'Komi'; font-size:100%"><b>Имя пользователя:</b></label>
+                <input type="text" class="form-control input-lg" name="name" id="name" placeholder="username" value required>
+            </div>
+            <div class="col-md-6">
+                <label for="email" style="font-family:'Komi'; font-size:100%"><b>Контактный email:</b></label>
+                <input type="text" class="form-control input-lg" name="email" id="email" placeholder="vasya_pupkin@mail.ru" value required>
+            </div>
+        </div>
+        <div class="row px-5 py-2">
+            <h3 style="font-family:'Komi'; font-size:120%"><b>Ваш отзыв:</b></h3>
+        </div>
+        <div class="row px-5 py-2">
+            <div class="col-md-4">
+                <label for="new_term" style="font-family:'Komi'; font-size:100%"><b>Тема</b></label>
+                <input type="text" class="form-control input-lg" name="new_term" id="new_term">
+            </div>
+            <div class="col-md-8">
+                <label for="new_definition" style="font-family:'Komi'; font-size:100%"><b>Текст отзыва</b></label>
+                <textarea type="text" class="form-control input-lg" name="new_definition" id="new_definition" aria-describedby="definition_note" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="row px-5 py-2">
+            <button type="submit" class="btn btn-primary" formaction="/send-chat">Отправить</button>
+        </div>
+    </form>
+</div>
+<img src="{% static 'symbols3.png' %}" class="img-responsive" width="1310">
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+<p align="center" style="font-family:'Komi'; font-size:90%">Видеоуроки</p>
+{% endblock %}
+
+{% block page-lead %}
+<br><p align="center" style="font-family:'Gabriola'; font-size:170%"><b>На этой странице вы можете ознакомиться с видеоуроками по индейским языкам от авторов сайта.</b></p>
+{% endblock %}
+{% load static %}
+
+{% block content %}
+<div class="py-2" style="position:absolute; padding-left:400px">
+<video src="{% static 'lesson1.mp4' %}" width="500" height="500">
+</div>
+<p style="position:absolute; padding-left:480px; padding-top:70px; font-family:'Komi'; font-size:150%"><b>Науатль. Введение</b></p>
+<img src="{% static 'symbols3.png' %}" class="img-responsive" width="1310">
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+<p align="center" style="font-family:'Komi'; font-size:80%">Статистика по<br> терминам</p>
+{% endblock %}
+
+{% block page-lead %}
+<br><br><br><br><p style="font-family:'Gabriola'; font-size:200%"><b>Здесь приведена статистика по добавленным в словарь-разговорник терминам.</b></p>
+{% endblock %}
+{% load static %}
+
+{% block content %}
+<div class="container px-4 py-5" style="position:absolute;" id="stats">
+	<br><br><br>
+    <div>
+        <h3 class="py-2" align="center" style="font-family:'Komi'; font-size:150%;"><b>Количество терминов</b></h3><br>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <h4 style="font-family:'Komi'; font-size:150%;"><b>{{ terms_all }}</b></h4>
+            <p class="text-muted" style="font-family:'Gabriola'; font-size:150%;"><b>всего</b></p>
+        </div>
+        <div class="col-md-4">
+            <h4 style="font-family:'Komi'; font-size:150%;"><b>{{ terms_own }}</b></h4>
+            <p class="text-muted" style="font-family:'Gabriola'; font-size:150%;"><b>изначально бывших в базе</b></p>
+        </div>
+        <div class="col-md-4">
+            <h4 style="font-family:'Komi'; font-size:150%;"><b>{{ terms_added }}</b></h4>
+            <p class="text-muted" style="font-family:'Gabriola'; font-size:150%;"><b>добавленных через<br> <a href="/add-term">форму добавления термина</b></a></p>
+        </div>
+    </div>
+	<br>
+    <div>
+        <h3 class="py-2" align="center" style="font-family:'Komi'; font-size:150%;"><b>Описания</b></h3><br>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <h4 style="font-family:'Komi'; font-size:150%;"><b>{{ words_avg }}</b></h4>
+            <p class="text-muted" style="font-family:'Gabriola'; font-size:150%;"><b>слов в среднем</b></p>
+        </div>
+        <div class="col-sm-4">
+            <h4 style="font-family:'Komi'; font-size:150%;"><b>{{ words_max }}</b></h4>
+            <p class="text-muted" style="font-family:'Gabriola'; font-size:150%;"><b>максимум</b></p>
+        </div>
+        <div class="col-sm-4">
+            <h4 style="font-family:'Komi'; font-size:150%;"><b>{{ words_min }}</b></h4>
+            <p class="text-muted" style="font-family:'Gabriola'; font-size:150%;"><b>минимум</b></p>
+        </div>
+    </div>
+</div>
+<img src="{% static 'symbols3.png' %}" class="img-responsive" width="1310">
+{% endblock %}
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Tlahtoltelpochcalli</title>
+    <!-- load static -->
+    {% load static %}
+    <!-- CSS -->
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+	<link rel="icon" type="images/x-icon" href="{% static 'smb1.png' %}">
+</head>
+<body>
+<main>
+    <div class="container">
+        <header class="border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <div class="fs-2 mb-3">
+                    <img src="{% static 'calc1.svg' %}" alt="Tlahtoltelpochcalli: портал о языках древней Мексики" width="50" height="50"/>
+                    <span style="font-family:'Komi'; font-size:80%"><b>Tlahtoltelpochcalli: портал о языках древней Мексики</b></span>
+                </div>
+            </a>
+        </header>
+        <div class="py-2" id="title-box">
+            <!--<div class="container-fluid py-5">
+                
+                
+            </div>-->
+		<div class="container-fluid">
+		  <div class="row">	
+		  <div class="img-wrap">
+			<h1 class="display-1 fw-bold" style="position: absolute; padding-left: 275px; padding-top: 180px">{% block page-title %}{% endblock %}</h1>
+			<h2 style="position: absolute; padding-left: 150px; padding-top: 280px; font-size: 100%">{% block page-lead %}{% endblock %}</h2>
+			<img src="{% static 'symbols1.png' %}" class="img-responsive">
+		 </div>
+		</div>	  		
+		</div>
+        </div>
+        {% block content %}{% endblock %}
+        <footer class="footer pt-3 mt-4 text-muted border-top">© 2023</footer>
+    </div>
+</main>
+</body>
+</html>
